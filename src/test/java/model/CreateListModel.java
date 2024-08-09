@@ -1,3 +1,5 @@
+package model;
+
 public class CreateListModel {
     private int boardId;
     private String name;

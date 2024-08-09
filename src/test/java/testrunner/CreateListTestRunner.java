@@ -1,4 +1,6 @@
-import javafx.scene.layout.Priority;
+package testrunner;
+
+import controller.CreateListController;
 import org.apache.commons.configuration.ConfigurationException;
 import org.testng.annotations.Test;
 

@@ -1,3 +1,5 @@
+package setup;
+
 import org.testng.annotations.BeforeTest;
 
 import java.io.FileInputStream;

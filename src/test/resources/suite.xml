@@ -2,7 +2,7 @@
 <suite name="Create list  and delete the list using rest Assured ">
 <test name="Crude Ops">
     <classes>
-     <class name="CreateListTestRunner">
+     <class name="testrunner.CreateListTestRunner">
 
      </class>
 
