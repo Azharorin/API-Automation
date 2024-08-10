@@ -3,9 +3,13 @@ package controller;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import model.CreateListModel;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.testng.annotations.Test;
+import setup.Setup;
+import utils.Utils;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -16,7 +20,7 @@ public class CreateListController extends Setup {
     public CreateListController() throws IOException {
         initConfig();
     }
-    public void docreateList(int boardId, String name, int order) throws ConfigurationException {
+    public int doCreateList(int boardId, String name, int order) throws ConfigurationException {
         RestAssured.baseURI = prop.getProperty("baseURL");
         CreateListModel createListModel =new CreateListModel();
         createListModel.setName(name);
@@ -33,9 +37,10 @@ public class CreateListController extends Setup {
         int id = jsonObj.get("id");
         System.out.println(id);
         Utils.setId(id, id);
+        return id;
 
     }
-    public void deleteList(int id) throws ConfigurationException {
+    public void doDeleteList(int id) throws ConfigurationException {
 
         RestAssured.baseURI = prop.getProperty("baseURL");
         Response res = given()

@@ -7,7 +7,6 @@ public class CreateListModel {
 
     // Default constructor
     public CreateListModel() {
-
     }
 
     // Parameterized constructor
@@ -41,5 +40,4 @@ public class CreateListModel {
     public void setOrder(int order) {
         this.order = order;
     }
-
 }

@@ -6,8 +6,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 public class Setup {
-    Properties prop;
-    FileInputStream fs;
+    public Properties prop;
+    public FileInputStream fs;
 
     @BeforeTest
     public void initConfig() throws IOException {
